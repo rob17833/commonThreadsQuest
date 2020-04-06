@@ -72,6 +72,7 @@ app.get('/api/coachs/', (req, res) => {
   });
 });
 
+// enter a bith date to select students
 app.get('/api/students-birth-date', (req, res) => {
   const birthDate = req.query.birthdate;
   connection.query('select * from students where students.birthdate> ?', birthDate, (err, results) => {
